@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Weather App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba75051f6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="overlay"></div>
+        <header class="header">
+          <div class="header_buttons">
+            <button class="button refresh">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+
+            <select
+              name="language"
+              id="language"
+              class="button button-language"
+            >
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+
+            <form>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="celsius"
+                  name="selector"
+                  value="celsius"
+                  checked
+                />
+                <label for="celsius">C&deg</label>
+                <input
+                  type="radio"
+                  id="farenheit"
+                  name="selector"
+                  value="farenheit"
+                />
+                <label for="farenheit">F&deg</label>
+              </div>
+            </form>
+          </div>
+          <div class="search-area">
+            <form>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search city ..."
+              />
+              <button class="button button-search" type="submit">SEARCH</button>
+            </form>
+          </div>
+        </header>
+        <div class="info">
+          <div class="info-container">
+            <h1></h1>
+            <div class="date-time">
+              <div class="date"></div>
+              <div class="time"></div>
+            </div>
+            <div class="today-weather-container">
+              <div class="today-weather">
+                <div class="temperature"></div>
+              </div>
+              <div class="today-weather">
+                <div class="icon"></div>
+                <div class="description"></div>
+                <div class="feels-like"></div>
+                <div class="wind"></div>
+                <div class="humidity"></div>
+              </div>
+            </div>
+          </div>
+          <div class="info-container">
+            <div class="map"></div>
+            <div class="latitude"></div>
+            <div class="longitude"></div>
+          </div>
+        </div>
+        <div class="weather-forcast-container">
+          <div class="weather-forecast">
+            <div class="day1"></div>
+            <div class="temp1"></div>
+            <div class="icon1"></div>
+          </div>
+          <div class="weather-forecast">
+            <div class="day2"></div>
+            <div class="temp2"></div>
+            <div class="icon2"></div>
+          </div>
+          <div class="weather-forecast">
+            <div class="day3"></div>
+            <div class="temp3"></div>
+            <div class="icon3"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIg2hTAbHj9ixLlOdBFYI-lhK4tQp6p5U&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
