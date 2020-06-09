@@ -17,8 +17,8 @@ function getLocation() {
         let temp;
 
         const temperature = document.querySelector('.temperature');
-        const api_weather_current = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${lat},${long}`;
-        const api_weather_forecast = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${lat},${long}&days=5`;
+        const api_weather_current = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${lat},${long}`;
+        const api_weather_forecast = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${lat},${long}&days=5`;
         const api_location = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=AIzaSyA65pqh1Xz6qrNwwiS-UXl38YDUBB2hbAs`;
 
         document.querySelector('.latitude').innerHTML = `Latitude: ${Math.round(
